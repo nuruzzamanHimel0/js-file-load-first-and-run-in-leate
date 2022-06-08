@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script src="script.js"></script> -->
+</head>
+<body>
+    <h1>Hellow himel</h1>
+    <div class="loader">
+        <img src="https://bibahabd.com/bbloder.gif" alt="">
+    </div>
+    <script>
+        var linkEl = document.createElement('link');
+        linkEl.href = 'script.js';
+        linkEl.as = 'script';
+        linkEl.rel = "preload";
+        document.head.appendChild(linkEl);
+
+        var linkE2 = document.createElement('link');
+        linkE2.href = 'js/app.js';
+        linkE2.as = 'script';
+        linkE2.rel = "preload";
+        document.head.appendChild(linkE2);
+
+        setTimeout(loadScript, 10000);
+
+        function loadScript(){
+            document.querySelector('.loader').style.display = 'none';
+            
+            var scriptE2 = document.createElement('script');
+            scriptE2.src = "js/app.js";
+            document.head.appendChild(scriptE2);
+
+            var scriptEl = document.createElement('script');
+            scriptEl.src = "script.js";
+            document.head.appendChild(scriptEl);
+
+          
+        }
+    </script>
+</body>
+</html>
